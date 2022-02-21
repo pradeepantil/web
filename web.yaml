@@ -1,0 +1,9 @@
+---
+- name: Install apache
+  hosts: webserver
+  become: true
+  tasks:
+  - name: Install apache via dnf
+    dnf:
+      name: httpd
+      state: installed
